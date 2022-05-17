@@ -1,0 +1,88 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{%block navbar%}
+<a href="{% url 'menuingresado' %}"><img class="logo" src="{% static 'app/img/logo_mis_macetitas_1370x256.png' %}" alt=""></a>
+<div class="collapse navbar-collapse" id="mynavbar">
+  <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+      <a class="nav-link " href="{% url 'menuingresado' %}">Inicio</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tienda</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href=" {% url 'maceteros' %} ">Maceteros</a></li>
+        <li><a class="dropdown-item" href=" {% url 'tierradehoja' %} ">Tierra de hoja</a></li>
+        <li><a class="dropdown-item" href="{% url 'arbustos' %} ">Arbustos</a></li>
+        <li><a class="dropdown-item" href=" {% url 'flores' %} ">Flores</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link activo" href="{% url 'historialcompras' %}">Historial compras</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="{% url 'modificardatos' %}">Modificar datos</a></li>
+        <li><a class="dropdown-item" href="{% url 'index' %}">Salir</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fa-solid fa-cart-shopping "rel="icon"  href="{% url 'carritocompras' %} "></a>
+    </li>
+  </ul>
+{%endblock%}
+{% block contenido %}
+
+<div class="decoracion"><h1>Historial de Compras</h1></div>
+<section>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>N*        </th>
+              <th>Nombre    </th>
+              <th>Apellido  </th>
+              <th>Direccion </th>
+              <th>Producto  </th>
+              <th>Precio    </th>
+              <th>Fecha     </th>
+              <th>Estado    </th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td></td>
+              <td>Juan</td>
+              <td>Perez</td>
+              <td>libertador, 5566</td>
+              <td>Macetero rustico</td>
+              <td>9.99$</td>
+              <td>09/03/2022</td>
+              <td><a href="{% url 'seguimiento' %}">seguimiento</a></td>
+            </tr>
+            
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
